@@ -11,6 +11,8 @@ public class ChildBase : MonoBehaviour {
     public int locationX = 0;
     public int locationY = 0;
 
+    public int roundNumber = 0;
+
     public void SetLocationXY(int x, int y)
     {
         locationX = x;
@@ -20,8 +22,9 @@ public class ChildBase : MonoBehaviour {
     // Use this for initialization
     public void Start () {
         Instance = this;
-        Debug.Log("初始化ChildBase");
-	}
+        //Debug.Log("初始化ChildBase");
+        Init();
+    }
 
     public virtual void Init()
     {
